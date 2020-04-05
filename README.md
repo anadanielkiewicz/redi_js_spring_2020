@@ -1,1 +1,1 @@
-This is my repo 
+Project created by Anna Danielkiewicz for Redi JS class

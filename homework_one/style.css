@@ -1,0 +1,55 @@
+body {
+    background-color:rgb(68, 66, 66);
+    color: rgb(245, 245, 245);
+}
+
+.main_navigation ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 9px;
+    overflow: hidden;
+    background-color: rgb(170, 165, 165);
+}
+
+.main_navigation li a 
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    float: left;
+}
+
+.main_navigation li a:hover:not(.active) {
+    background-color: rgb(189, 184, 184);
+  }
+
+
+.active 
+  {
+      background-color: rgb(189, 184, 184);
+  }
+  
+
+.card{
+    border: 2px dotted whitesmoke;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: 14em ;
+    margin-right: 14em ;
+    line-height: 1.5;
+}
+
+
+.footer {
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+    color: white;
+
+}
+.main {text-align: center;} 

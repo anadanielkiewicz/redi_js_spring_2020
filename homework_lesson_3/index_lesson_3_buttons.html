@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> base page </title>
+    <meta name="author" content="Anna Danielkiewicz">
+    <meta name="description" content="The base page we will be using for learning javascript">
+    <link rel="stylesheet" href="style_lesson_3_buttons.css" type="text/css">    
+  </head>
+  <body>
+
+  <header> 
+    <nav class="main_navigation">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Aboutme">About me</a></li>
+            <li><a href="#Basepage" class="active">Base page</a></li>
+            
+            <!-- JavaScript Nav Button-->
+            <div class="buttonNav">
+              <button id="NavButtonOne"> Click me</button>
+              <button id="NavButtonTwo"> Feel good button </button>
+              <p id="NavButtonAnswer"> </p>
+
+              <script type="text/javascript">
+              
+              let NavButtonOneCmp=document.getElementById("NavButtonOne");
+              let NavButtonTwoCmp=document.getElementById("NavButtonTwo");
+              let NavButtonAnswerCmp=document.getElementById("NavButtonAnswer");
+
+              function NavButtonOne(event) {
+                NavButtonAnswerCmp.textContent="Awesome!";
+              }
+
+              function NavButtonTwo(event) {
+                NavButtonAnswerCmp.textContent="I feel really good today";
+              }
+
+              NavButtonOneCmp.addEventListener("click", NavButtonOne);
+              NavButtonTwoCmp.addEventListener("click", NavButtonTwo);
+              </script>
+            
+ 
+            </div> 
+        </ul>
+    </nav>
+  </header> 
+
+
+<!-- JavaScript Good & Bad Button-->
+  <div class="HowAreYouButton">
+
+    <p>How are you?</p>
+    <button id="goodButton">Good 👍</button>
+    <button id="badButton">Bad 👎</button>
+    <p id="answer"></p>
+
+    <script>
+
+    let goodButtonCmp = document.getElementById("goodButton");
+	  let badButtonCmp = document.getElementById("badButton");
+    let answerCmp = document.getElementById("answer");
+
+    function goodButtonClick(event) {
+      answerCmp.textContent = "That's great 😊";
+    }
+    
+    function badButtonClick(event) {
+		  answerCmp.textContent = "Oh that's sad 😥";
+    }
+    
+    goodButtonCmp.addEventListener("click", goodButtonClick);
+    badButtonCmp.addEventListener("click", badButtonClick);
+    
+    </script>
+  </div> <br><br>
+
+ <!-- JavaScript Burger Button-->
+<div>
+  <a id="burgerButton" href="#"> </a>
+  
+  <script type="text/javascript">
+  
+  const burgerButtonEl=document.getElementById('burgerButton')
+  
+  function burgerButtonOnclickHandler() {
+    console.log('Of course in Poland, great reason to visit this country :)');
+    alert('If you want nice burger try one in PASIBUS.');
+  }
+  
+  burgerButtonEl.addEventListener('click', burgerButtonOnclickHandler);
+    
+  </script>
+</div>
+
+
+<!--FOOTER-->
+  <footer class="footer"> 
+      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
+  </footer>
+<!--FOOTER-->
+
+  </body>
+</html>

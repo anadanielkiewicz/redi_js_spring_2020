@@ -16,51 +16,31 @@
             <li><a href="#Home">Home</a></li>
             <li><a href="#Aboutme">About me</a></li>
             <li><a href="#Basepage" class="active">Base page</a></li>
-            
-            <!-- JavaScript Nav Button-->
-            <div class="buttonNav">
-              <button id="NavButtonOne"> Click me</button>
-              <button id="NavButtonTwo"> Feel good button </button>
-              <p id="NavButtonAnswer"> </p>
-
-              <script type="text/javascript">
-              
-              let NavButtonOneCmp=document.getElementById("NavButtonOne");
-              let NavButtonTwoCmp=document.getElementById("NavButtonTwo");
-              let NavButtonAnswerCmp=document.getElementById("NavButtonAnswer");
-
-              function NavButtonOne(event) {
-                NavButtonAnswerCmp.textContent="Awesome!";
-              }
-
-              function NavButtonTwo(event) {
-                NavButtonAnswerCmp.textContent="I feel really good today";
-              }
-
-              NavButtonOneCmp.addEventListener("click", NavButtonOne);
-              NavButtonTwoCmp.addEventListener("click", NavButtonTwo);
-              </script>
-            
- 
-            </div> 
         </ul>
     </nav>
   </header> 
 
-
-<!-- JavaScript Good & Bad Button-->
-  <div class="HowAreYouButton">
+<!-- JavaScript Awesome&Good&Bad Button-->
+  <div class="howAreYouButton">
 
     <p>How are you?</p>
+    <button id="awesomeButton">Awesome 😍</button>
     <button id="goodButton">Good 👍</button>
     <button id="badButton">Bad 👎</button>
     <p id="answer"></p>
-
-    <script>
-
+  
+  </div>
+  
+  <script>
+    
+    let awesomeButtonCmp = document.getElementById("awesomeButton");
     let goodButtonCmp = document.getElementById("goodButton");
 	  let badButtonCmp = document.getElementById("badButton");
     let answerCmp = document.getElementById("answer");
+
+    function awesomeButtonClick(event) {
+      answerCmp.textContent = "That's so amazing 😊!";
+    }
 
     function goodButtonClick(event) {
       answerCmp.textContent = "That's great 😊";
@@ -70,11 +50,11 @@
 		  answerCmp.textContent = "Oh that's sad 😥";
     }
     
+    awesomeButtonCmp.addEventListener("click", awesomeButtonClick);
     goodButtonCmp.addEventListener("click", goodButtonClick);
     badButtonCmp.addEventListener("click", badButtonClick);
     
-    </script>
-  </div> <br><br>
+  </script> <br><br>
 
  <!-- JavaScript Burger Button-->
 <div>
@@ -82,7 +62,7 @@
   
   <script type="text/javascript">
   
-  const burgerButtonEl=document.getElementById('burgerButton')
+  const burgerButtonEl=document.getElementById('burgerButton');
   
   function burgerButtonOnclickHandler() {
     console.log('Of course in Poland, great reason to visit this country :)');

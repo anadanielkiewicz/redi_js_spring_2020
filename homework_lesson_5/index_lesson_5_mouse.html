@@ -8,21 +8,15 @@
     <meta name="description" content="The base page we will be using for learning javascript">
     <link rel="stylesheet" href="style_lesson_5_mouse.css" type="text/css">    
   </head>
+  
   <body>
- 
+  
   <div class="strangeButton">
+    <button id="strangeButton"> Strange button </button>
+  </div>
+  
+  <script type="text/javascript">
 
-   <button id="strangeButton"> Strange button </button>
-
-</div>
-
-<!--FOOTER-->
-  <footer class="footer"> 
-      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
-  </footer>
-<!--FOOTER-->
-
-    <script type="text/javascript">
     let strangeButtonCmp = document.getElementById("strangeButton");
     const initialLabel = "Strange button";
     strangeButtonCmp.classList.add("based-color");
@@ -33,27 +27,34 @@
     
     function mouseOverHandler(event){
       console.log('Mouse here!'); 
-      strangeButtonCmp.innerText = "What just happened?"
+      strangeButtonCmp.innerText = "What just happened?";
       strangeButtonCmp.classList.add('inverted-color'); 
-      strangeButtonCmp.classList.add('big-button');
     }
-
+    
     function mouseLeaveHandler(event){
       console.log('Mouse just left that button');
       strangeButtonCmp.innerText = initialLabel;
       strangeButtonCmp.classList.remove('inverted-color');
-      strangeButtonCmp.classList.remove('big-button');
     }
 
     function doubleClickHandler(event){
       console.log("changing the text after double-click");
-      strangeButtonCmp.classList.add('StrangeButtonDbclick');
+      strangeButtonCmp.classList.add('strangeButtonDbclick');
     }
   
     strangeButtonCmp.addEventListener("click", clickHandler);
     strangeButtonCmp.addEventListener("mouseover", mouseOverHandler);
     strangeButtonCmp.addEventListener("mouseleave", mouseLeaveHandler);
     strangeButtonCmp.addEventListener("dblclick", doubleClickHandler);
+
   </script>
+
+
+<!--FOOTER-->
+  <footer class="footer"> 
+      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
+  </footer>
+<!--FOOTER-->
+
   </body>
 </html>

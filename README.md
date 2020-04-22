@@ -1,1 +1,0 @@
-Project created by Anna Danielkiewicz for Redi JS class

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> base page </title>
+    <meta name="author" content="Anna Danielkiewicz">
+    <meta name="description" content="The base page we will be using for learning javascript">
+    <link rel="stylesheet" href="style_lesson_3_buttons.css" type="text/css">    
+  </head>
+  <body>
+
+  <header> 
+    <nav class="main_navigation">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Aboutme">About me</a></li>
+            <li><a href="#Basepage" class="active">Base page</a></li>
+        </ul>
+    </nav>
+  </header> 
+
+<!-- JavaScript Awesome&Good&Bad Button-->
+  <div class="howAreYouButton">
+
+    <p>How are you?</p>
+    <button id="awesomeButton">Awesome 😍</button>
+    <button id="goodButton">Good 👍</button>
+    <button id="badButton">Bad 👎</button>
+    <p id="answer"></p>
+  
+  </div>
+  
+  <script>
+    
+    let awesomeButtonCmp = document.getElementById("awesomeButton");
+    let goodButtonCmp = document.getElementById("goodButton");
+	  let badButtonCmp = document.getElementById("badButton");
+    let answerCmp = document.getElementById("answer");
+
+    function awesomeButtonClick(event) {
+      answerCmp.textContent = "That's so amazing 😊!";
+    }
+
+    function goodButtonClick(event) {
+      answerCmp.textContent = "That's great 😊";
+    }
+    
+    function badButtonClick(event) {
+		  answerCmp.textContent = "Oh that's sad 😥";
+    }
+    
+    awesomeButtonCmp.addEventListener("click", awesomeButtonClick);
+    goodButtonCmp.addEventListener("click", goodButtonClick);
+    badButtonCmp.addEventListener("click", badButtonClick);
+    
+  </script> <br><br>
+
+ <!-- JavaScript Burger Button-->
+<div>
+  <a id="burgerButton" href="#"> </a>
+  
+  <script type="text/javascript">
+  
+  const burgerButtonEl=document.getElementById('burgerButton');
+  
+  function burgerButtonOnclickHandler() {
+    console.log('Of course in Poland, great reason to visit this country :)');
+    alert('If you want nice burger try one in PASIBUS.');
+  }
+  
+  burgerButtonEl.addEventListener('click', burgerButtonOnclickHandler);
+    
+  </script>
+</div>
+
+
+<!--FOOTER-->
+  <footer class="footer"> 
+      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
+  </footer>
+<!--FOOTER-->
+
+  </body>
+</html>

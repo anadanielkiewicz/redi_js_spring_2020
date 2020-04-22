@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> base page </title>
+    <meta name="author" content="Anna Danielkiewicz">
+    <meta name="description" content="The base page we will be using for learning javascript">
+    <link rel="stylesheet" href="style_lesson_4_calculator.css" type="text/css">
+  </head>
+
+  <body>
+    
+    <p> ADDING CALCULATOR </p>
+
+    <div class="calculator">    
+      <ul id="numberList"></ul>
+      <p id="totalSum"></p>
+      <input id="numberInput" placeholder="number">
+      <button id="addNumber" type="button"> add number </button>
+    </div>
+    
+    <script>
+    
+    const numberListEl = document.getElementById('numberList');
+    const numberInputEl = document.getElementById('numberInput');
+    const numberAddBtn = document.getElementById('addNumber');
+    const updateTotalSum = document.getElementById('totalSum');
+    let sum=0;
+    
+    function addNumber() {
+      const num = parseFloat(numberInputEl.value);
+      sum = sum + num;
+      updateTotalSum.textContent=sum;
+      
+      const numberEl = document.createElement('li');
+      numberEl.textContent = num;
+      numberListEl.appendChild(numberEl);     
+      numberInputEl.value = '';
+    }
+    
+    numberAddBtn.addEventListener('click', addNumber);
+
+</script>
+
+</body>
+</html>

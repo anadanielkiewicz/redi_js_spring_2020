@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> base page </title>
+    <meta name="author" content="Anna Danielkiewicz">
+    <meta name="description" content="The base page we will be using for learning javascript">
+    <link rel="stylesheet" href="style_lesson_6_hw_store.css" type="text/css">    
+  </head>
+  <body>
+
+  <header> 
+    <nav class="main_navigation">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#basepage" class="active">SHOP</a></li>
+            <li><a href="#blog">BLOG</a></li>
+        </ul>
+    </nav>
+  </header> 
+
+  <h1> WATCHES ONLINE STORE </h1>
+
+ <section>
+  <ul class="js-watches-list"></ul>
+  <h2 class="header2"></h2>
+ </section>
+
+  <script>
+
+  const warranty = {
+    type: "manufacturer",
+    time: "2 years"
+  }
+
+  const rosefieldWomenWatch = {
+    img: 'rosefieldWomenWatch.png',
+    producent: "Rosefield",
+    model: {
+      name: "West Village",
+      ref: 237840,
+      year: 2018
+    },
+    type: "women",
+    itemShape: "round",
+    mechanismType: "quartz",
+    dateFunction: false,
+    displayType: "digital",
+    waterproff: "30m",
+    belt: {
+      material: "leather",
+      style: "classic",
+      width: "16mm",
+      color: "grey"
+    },
+    caseMaterial: "steel brass",
+    weight: "126 grams",
+    warrantyType: warranty
+  };
+
+  const paulvalentineWomenWatch = {
+    img: 'paulvalentineWomenWatch.png',
+    producent: "Paul Valentine",
+    model: {
+      name: "Coffee Marble",
+      ref: "-",
+      year: 2019
+    },
+    type: "women",
+    itemShape: "round",
+    mechanismType: "quartz",
+    dateFunction: false,
+    displayType: "digital",
+    waterproff: "50m",
+    belt: {
+      material: "leather",
+      style: "classic",
+      width: "14mm",
+      color: "coffe marble"
+    },
+    caseMaterial: "stainless steel",
+    weight: "",
+    warrantyType: warranty
+  };
+
+  const fossilMenWatch = {
+    img: 'fossilMenWatch.png',
+    producent: "Fossil",
+    model: {
+      name: "Machine",
+      ref: "FS4656",
+      year: 2019
+    },
+    type: "men",
+    itemShape: "round",
+    mechanismType: "quartz",
+    dateFunction: true,
+    displayType: "chronograph",
+    waterproff: "50m",
+    belt: {
+      material: "leather",
+      style: "fashion",
+      width: "22mm",
+      color: "brown"
+    },
+    caseMaterial: "stainless steel",
+    weight: "83g",
+    warrantyType: warranty
+  };
+
+  const plantwearMenWatch = {
+    img: 'plantwearMenWatch.jpg',
+    producent: "Plantwear",
+    model: {
+      name: "Raw Palisander",
+      ref: "-",
+      year: 2019
+    },
+    type: "men",
+    itemShape: "round",
+    mechanismType: "quartz",
+    dateFunction: false,
+    displayType: "digital",
+    waterproff: "lack",
+    belt: {
+      material: "wood",
+      style: "fashion",
+      width: "20mm",
+      color: "brown"
+    },
+    caseMaterial: "wood - Palisander",
+    weight: "141g",
+    warrantyType: warranty
+  };
+
+
+  const watchesListEl=document.querySelector('.js-watches-list');
+
+  function displayWatches(watches){
+
+    const liEl=document.createElement('li');
+
+    liEl.classList.add("card");
+
+    liEl.innerHTML = `
+    <img class="watchPhoto" src="${watches.img}" />
+    <h2>${watches.producent} (${watches.model.name})</h2>
+    <p> PRODUCENT: ${watches.producent} </p>
+    <p> ref: ${watches.model.ref} </p>
+    <p> year of production: ${watches.model.year} </p>
+    <p> FOR WHO? ${watches.type}</p>
+    <li> FUNCTIONS: </li>
+    <li> date function: ${watches.dateFunction}</li>
+    <li> display type: ${watches.displayType}</li>
+    <li> waterproof: ${watches.waterproff}</li>
+    <br>
+    
+    <button onclick="clickButton()"> More detailes </button>
+
+    <button class="buyButton"> Buy now </button>
+    `;
+    
+/*
+    function clickButton() {
+    alert("This is a beautiful ${watches.belt.style} ${watches.mechanismType}, hand watch. \n
+    His ${watches.itemShape} case shape made by ${watches.caseMaterial} and ${watches.belt.color} ${watches.belt.width} belt made by ${watches.belt.material} create unique product. \n
+    Try it, it is only ${watches.weight} beauty on your hand, but what a pleasure.
+    model: ${watches.model.name}, ${watches.model.ref}, produced in ${watches.model.year}. 
+    Belt made of ${watches.belt.material},${watches.belt.style} style. ${watches.belt.width} ${watches.belt.color} belt width.
+    Another functions: waterproof: ${watches.waterproof}, date function: ${watches.dateFunction}
+    ");
+    }
+ */
+
+    watchesListEl.appendChild(liEl);
+    
+  } 
+  
+  displayWatches(rosefieldWomenWatch); 
+  displayWatches(paulvalentineWomenWatch);
+  displayWatches(fossilMenWatch);
+  displayWatches(plantwearMenWatch);
+  
+  
+</script>
+
+<!--FOOTER-->
+  <footer class="footer"> 
+      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
+  </footer>
+<!--FOOTER-->
+
+  </body>
+</html>

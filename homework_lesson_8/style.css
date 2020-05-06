@@ -78,10 +78,19 @@ html{
    /* font-weight: bolder;
     color: rgb(24, 23, 23);*/
 }
+.onlineStoreWrapper{
+    display: flex;
+}
 
+.watchesListWrapper{
+    width: 80%;
+}
+
+.shoppingCart {
+    width: 15%;
+}
 
 .shoppingListBtn{
-/*padding-left: 30px;*/
     font-size: large;
     font-weight: bolder;
     color: rgb(24, 23, 23);

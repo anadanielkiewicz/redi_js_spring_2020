@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> base page </title>
+    <meta name="author" content="Anna Danielkiewicz">
+    <meta name="description" content="The base page we will be using for learning javascript">
+    <link rel="stylesheet" href="style_lesson_5_mouse.css" type="text/css">    
+  </head>
+  
+  <body>
+  
+  <div class="strangeButton">
+    <button id="strangeButton"> Strange button </button>
+  </div>
+  
+  <script type="text/javascript">
+
+    let strangeButtonCmp = document.getElementById("strangeButton");
+    const initialLabel = "Strange button";
+    strangeButtonCmp.classList.add("based-color");
+    
+    function clickHandler(event){
+      console.log('Hey, you just pressed strange button');
+    }
+    
+    function mouseOverHandler(event){
+      console.log('Mouse here!'); 
+      strangeButtonCmp.innerText = "What just happened?";
+      strangeButtonCmp.classList.add('inverted-color'); 
+    }
+    
+    function mouseLeaveHandler(event){
+      console.log('Mouse just left that button');
+      strangeButtonCmp.innerText = initialLabel;
+      strangeButtonCmp.classList.remove('inverted-color');
+    }
+
+    function doubleClickHandler(event){
+      console.log("changing the text after double-click");
+      strangeButtonCmp.classList.add('strangeButtonDbclick');
+    }
+  
+    strangeButtonCmp.addEventListener("click", clickHandler);
+    strangeButtonCmp.addEventListener("mouseover", mouseOverHandler);
+    strangeButtonCmp.addEventListener("mouseleave", mouseLeaveHandler);
+    strangeButtonCmp.addEventListener("dblclick", doubleClickHandler);
+
+  </script>
+
+
+<!--FOOTER-->
+  <footer class="footer"> 
+      <p> Made by Anna Danielkiewicz for ReDi: Frontend Development 2 </p>
+  </footer>
+<!--FOOTER-->
+
+  </body>
+</html>

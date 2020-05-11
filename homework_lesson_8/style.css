@@ -1,0 +1,103 @@
+body{
+    margin:1em;
+    padding:0;
+    min-height: 100%;
+    background-color:rgb(68, 66, 66);
+    color: rgb(245, 245, 245);
+    position:relative;    
+}
+  
+html{
+    height: 150%;
+}
+    
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;	
+    text-align: center;
+    background-color: rgb(192, 192, 192);
+    color: white;
+    
+}
+  
+.main_navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 9px;
+    overflow: hidden;
+    background-color: rgb(170, 165, 165);
+}
+
+.main_navigation li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    float: left;
+}
+
+.main_navigation li a:hover:not(.active){
+    background-color: rgb(189, 184, 184);
+}
+
+.active{
+    background-color: rgb(189, 184, 184);
+}
+
+.card{
+
+    display: block;
+    border: 2px dotted whitesmoke;
+    color: white;
+    background-color:rgb(92, 89, 89);
+    width: 420px;
+    height: 880px;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-size: large;
+    /*font-weight: bold;*/
+    float: left;
+}
+
+.card li{
+    list-style-type: none; 
+}
+
+.cart li{
+    list-style-type: none; 
+}
+
+.buyBtn{
+    font-size: large;
+   /* font-weight: bolder;
+    color: rgb(24, 23, 23);*/
+}
+.onlineStoreWrapper{
+    display: flex;
+}
+
+.watchesListWrapper{
+    width: 80%;
+}
+
+.shoppingCart {
+    width: 15%;
+}
+
+.shoppingListBtn{
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(24, 23, 23);
+}
+
+.totalBtn{
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(24, 23, 23);
+}

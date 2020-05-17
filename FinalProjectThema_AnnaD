@@ -1,0 +1,37 @@
+
+Final project topic (proposition): Beauty salon website.
+Student: Anna Danielkiewicz
+
+Beauty salon website.
+It will be the site of a real make-up artist who has FB and a blog but no website. 
+The logo will be used - thus the choice of page colors, a large number of professional photos and videos.
+
+Links to the existing page on Facebook and the blog will be created.
+
+Bookmarks: about us, offered beauty treatments, Q&A, gallery of performed works, certificates, contact.
+
+I will focus here especially on the graphic page, but also on the page dynamics - that is, 
+that the page would not be so static, but that the photos would move, transitions below, etc.
+I would like to include the most frequently asked questions and answers in Q&A. 
+If the customer does not find an answer, they can fill out the contact form, 
+the content of which will be sent to the email of the owner of the page.
+Contact + location in relation to the point on the map and google maps.
+
+Ideas:
+- Schedule - a hard matter, I haven't come up with a solution yet and I don't know if I can adapt it to my needs.
+- Comments from Facebook attached to the page.
+- Phone icon - the ability to call from a phone by clicking.
+- Email icon - with the option of sending an email.
+- ...
+
+Important aspects I will have to face:
+- website and data security,
+- privacy policy,
+- proper display of the page on every device,
+- appropriate attachment of photos so that they do not slow down the movement of the website,
+- ...
+
+I would like to stay with it. I was wondering what I can do, which might be useful for me at work, 
+but I don't know how JS is used in large companies. That's why I focused on creating pages, 
+where I can also learn a lot and can someday use my own business. 
+I also count on your support, ideas and maybe introducing me to the implementation of the site.
